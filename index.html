@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Terminal Giriş</title>
+  <title>Mesaj</title>
   <style>
     body {
       background-color: #000;
       color: #fff;
       font-family: 'Courier New', Courier, monospace;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
+      padding: 20px;
+      text-align: center;
     }
 
     #typewriter {
@@ -33,15 +35,15 @@
   <div id="typewriter"></div>
 
   <script>
-    const text = "Sisteme giriş yapılıyor...\nHoş geldin, Komutan.";
+    const text = "bugün çok güzelsin... her zaman ki gibi";
     const typewriter = document.getElementById("typewriter");
     let index = 0;
 
     function type() {
       if (index < text.length) {
-        typewriter.textContent += text[index] === '\n' ? '\n' : text[index];
+        typewriter.textContent += text[index];
         index++;
-        setTimeout(type, 100); // Hız: 100ms harf başına
+        setTimeout(type, 120); // Daha duygusal bir tempo için yavaş yazım
       }
     }
 
